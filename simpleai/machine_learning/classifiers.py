@@ -269,7 +269,7 @@ class DecisionTreeNode(object):
         self.result = (majority, counts[majority] / float(total))
 
     def add_branch(self, value, branch=None):
-        assert not value in self.branches
+        assert value not in self.branches
         if branch is None:
             branch = self.__class__()
         self.branches[value] = branch

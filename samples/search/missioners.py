@@ -28,7 +28,7 @@ class MissionersProblem(SearchProblem):
         '''Check if a state is valid.'''
         # valid states: no more cannibals than missioners on each side,
         # and numbers between 0 and 3
-        return ((s[0] >= s[1] or s[0] == 0)) and \
+        return  (s[0] >= s[1] or s[0] == 0) and \
                 ((3 - s[0]) >= (3 - s[1]) or s[0] == 3) and \
                 (0 <= s[0] <= 3) and \
                 (0 <= s[1] <= 3)
